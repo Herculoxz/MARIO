@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/python3          
 import os
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
@@ -24,6 +24,7 @@ def generate_launch_description():
     robot_desc_path = os.path.join(get_package_share_directory(package_description), "urdf", urdf_file)
     print("Fetching URDF ==>")
 
+    # This node allows us to manually control the positions ( joint_states) of the robot.
     joint_state_publisher = Node(
             package="joint_state_publisher_gui",
             executable="joint_state_publisher_gui"
@@ -31,7 +32,7 @@ def generate_launch_description():
 
 
 
-    # Robot State Publisher
+    # This node publishes the state of the robot's joints to the rest of the ROS system.
     robot_state_publisher_node = Node(
         package='robot_state_publisher',
         executable='robot_state_publisher',
@@ -41,6 +42,7 @@ def generate_launch_description():
         output="screen"
     )
 
+    # This node starts Rviz2 ; loads pre-configured Rviz2 view of the manipulator 
     rviz_launch = Node(
             package='rviz2',
             namespace='',
@@ -49,12 +51,14 @@ def generate_launch_description():
             parameters=[{'use_sim_time' : True}],
             arguments=['-d' + os.path.join(get_package_share_directory(package_description), 'rviz', 'manipulator.rviz')]
         )
+    # This node publishes a transform ( static coordinates ) from base_link to link_1
     tf2_link1 = Node(
             package='tf2_ros',
             namespace='',
             executable='static_transform_publisher',
             arguments=["-0.0030196", "0.046937", "0.0635", "0", "0", "0", "base_link", "link_1"]
         )
+    # This node publishes a transform (static coordinates ) from link_1 to link_2
     tf2_link2 = Node(
             package='tf2_ros',
             namespace='',
@@ -62,20 +66,21 @@ def generate_launch_description():
             arguments=["0.00031511", "-0.0095653", "0.034407", "0", "0", "0", "link_1", "link_2"]
         )
 
+        # This node publishes a transform (static coordinates ) from link_2 to link_3
     tf2_link3 = Node(
             package='tf2_ros',
             namespace='',
             executable='static_transform_publisher',
             arguments=["0.071531", "0.011279", "-0.0041348", "0", "0", "0", "link_2", "link_3"]
         )
-    
+        # This node publishes a transform (static coordinates ) from link_3 to claw_right
     tf2_claw_right = Node(
             package='tf2_ros',
             namespace='',
             executable='static_transform_publisher',
             arguments=["0.020925", "-0.013767", "-0.090331", "0", "0", "0", "link_3", "claw_right"]
         )
-    
+        # This node publishes a transform (static coordinates ) from claw_right to claw_left 
     tf2_claw_left = Node(
             package='tf2_ros',
             namespace='',

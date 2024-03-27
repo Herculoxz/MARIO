@@ -45,4 +45,4 @@ rosrun simulation_rviz pub_rviz.py
 Then initially set all values to zero , to get the default position of the manipulator .  
 After this you can now check for different values.
 
-As you give the input , you can observe how the manipulator moved according to your input values of angles between links.
+As you give the input in the terminal , you can observe how the manipulator moved according to your input values of angles between links.

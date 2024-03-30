@@ -24,10 +24,15 @@ find_package(robot_state_publisher REQUIRED)
 # add_executable(publisher src/test.cpp)
 # ament_target_dependencies(publisher rclcpp std_msgs geometry_msgs sensor_msgs)
 
+
 # install(
 #   TARGETS publisher
 #   DESTINATION lib/${PROJECT_NAME}
 # )
+install(
+PROGRAMS scripts/rviz.py 
+DESTINATION lib/${PROJECT_NAME}
+)
 
 install(
   DIRECTORY config launch meshes rviz scripts urdf

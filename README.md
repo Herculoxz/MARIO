@@ -7,13 +7,13 @@ If you have not installed the joint_state_publishers and ros_control for ros-noe
 
 * Remember : Whenever you are using ros commands in another terminal , make sure you  source the ros commands:
 ```
-source install /setup.bash
+source install/setup.bash
 ```
   
 
 *  Run the launch file
 ```
-  roslaunch simulation_rviz display.launch 
+  ros2 launch simulation_rviz display.launch.py 
 ```
 
 
@@ -38,9 +38,9 @@ sudo apt install ros-<your_version_of_ros>-joint-state-publisher-gui
 ```
 roslaunch simulation_rviz mario_rviz.launch    
 ```
-* To give input angles from command line
+* To give input angles from command line , oepn new terminal and run 
 ```
-python3 3_simulation_rviz/scripts/rviz.py
+ros2 run simulation_rviz rviz.py 
 ```
 
 *you can use your this command to view the topics actively published . This will show if the values are published to the toppic we want to.
@@ -50,10 +50,6 @@ ros2 topic lsit
 *To observe the published data in another terminal 
 ```
 ros2 topic echo
-```
-*  Now ,On a different terminal, source ROS again and go to the simulation folder and write the following command
-```
-rosrun simulation_rviz pub_rviz.py  
 ```
 Then initially set all values to zero , to get the default position of the manipulator .  
 After this you can now check for different values.

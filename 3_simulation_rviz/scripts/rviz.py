@@ -7,7 +7,6 @@ from tf2_ros.static_transform_broadcaster import StaticTransformBroadcaster
 from std_msgs.msg import Header
 from rclpy import qos
 import math
-from std_msgs.msg import String
 import geometry_msgs.msg
 import sys
 
@@ -47,11 +46,9 @@ if __name__ == '__main__':
     rclpy.init(args=sys.argv)
     global node 
     node = rclpy.create_node('joint_state_pub')
-    node.get_logger().info(' Enter your Angles')
-    pub = node.create_publisher(String, 'chatter', qos_profile=qos.qos_profile_parameters)
+    node.get_logger().info(' Enter your Angles ')
     msg = String()
     msg.data = 'hello_str\n'
     node.create_timer(0.1, talker)
-    pub.publish(msg)
     rclpy.spin(node)
     rclpy.shutdown()

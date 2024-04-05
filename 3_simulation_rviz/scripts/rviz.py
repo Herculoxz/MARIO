@@ -47,8 +47,6 @@ if __name__ == '__main__':
     global node 
     node = rclpy.create_node('joint_state_pub')
     node.get_logger().info(' Enter your Angles ')
-    msg = String()
-    msg.data = 'hello_str\n'
     node.create_timer(0.1, talker)
     rclpy.spin(node)
     rclpy.shutdown()

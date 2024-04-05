@@ -40,7 +40,7 @@ ros2 launch simulation_rviz mario_rviz.launch
 ```
 * To give input angles from command line
 ```
-ros2 run 3_simulation_rviz/scripts/rviz.py
+ros2run 3_simulation_rviz/scripts/rviz.py
 ```
 
 *you can use your this command to view the topics actively published . This will show if the values are published to the toppic we want to.

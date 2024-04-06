@@ -8,7 +8,7 @@
 
 ### Working of the Mario Bot
 
-<p align="center"><img src="assets/Gif2_AdobeExpress.gif" width="500" height="500"></p>
+<p align="center"><img src="assets/simulation_mario_v2.3.gif" width="500" height="500"></p>
 
 ### Mario bot simulated using Gazebo 
 
@@ -39,10 +39,8 @@
   * DH Parameters :- Denavit–Hartenberg parameters (also called DH parameters) are the four parameters associated with a particular convention for attaching reference frames to the links of a spatial kinematic chain, or robot manipulator
   * Forward Kinematics :- Forward kinematics refers to the use of the kinematic equations of a robot to compute the position of the end-effector from specified values for the joint parameters. The kinematics equations of the robot are used in robotics, computer games, and animation.
   * Inverse Kinematics :- inverse kinematics is the mathematical process of calculating the variable joint parameters needed to place the end of a kinematic chain, such as a robot manipulator or animation character's skeleton, in a given position and orientation relative to the start of the chain.
-## ROS 
-ROS is an open-source, meta-operating system for your robot. It provides the services you would expect from an operating system, 
-including hardware abstraction, low-level device control, implementation of commonly-used functionality, message-passing between processes,
-and package management.
+## ROS-2 
+ROS2 is the ultimate toolkit for robotics enthusiasts and professionals alike. Seamlessly integrating hardware and software, ROS2 streamlines development workflows, accelerates prototyping, and enables rapid iteration. With its modular architecture and extensive library of reusable components, ROS2 simplifies the creation of complex robotics projects, from autonomous drones to collaborative robot arms. 
 
 ## Publisher and Subscriber
 Publish/Subscribe is a messaging pattern that aims to decouple the sending (Publisher) and receiving (Subscriber) party. A real world example could be a sport mobile app that shows you up-to-date information of a particular football game you're interested in. In this case you are the subscriber, as you express interest in this specific game. On the other side sits the publisher, which is an online reporter that feeds a system with the actual match data.

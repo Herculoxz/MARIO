@@ -5,6 +5,11 @@ RViz 2 is a powerful 3D visualization tool provided by the Robot Operating Syste
 
 If you have not installed the joint_state_publishers and ros_control for ros-noetic, follow the commands given [here](https://github.com/SRA-VJTI/MARIO/tree/master/2_simulation_dh)
 
+* We already have ros2_ws. So now just copy the 3_simulation_rviz in the src folder of the ros2_ws. 
+```
+cp -r /home/(user_name)/MARIO/3_simulation_rviz/home/(user_name)/ros2_ws/src
+``` 
+
 * Remember : Whenever you are using ros commands in another terminal , make sure you  source the ros commands:
 ```
 source install/setup.bash

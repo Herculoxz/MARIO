@@ -7,7 +7,7 @@ If you have not installed the joint_state_publishers and ros_control for ros-noe
 
 * We already have ros2_ws. So now just copy the 3_simulation_rviz in the src folder of the ros2_ws. 
 ```
-cp -r /home/(user_name)/MARIO/3_simulation_rviz/home/(user_name)/ros2_ws/src
+cp -r /home/(user_name)/MARIO/3_simulation_rviz /home/(user_name)/ros2_ws/src
 ``` 
 
 * Remember : Whenever you are using ros commands in another terminal , make sure you  source the ros commands:

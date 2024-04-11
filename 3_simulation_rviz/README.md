@@ -13,7 +13,7 @@ source install/setup.bash
 
 *  Run the launch file
 ```
-  ros2 launch simulation_rviz display.launch 
+  ros2 launch simulation_rviz display.launch.py
 ```
 
 

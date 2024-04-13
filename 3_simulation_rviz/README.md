@@ -41,7 +41,7 @@ sudo apt install ros-<your_version_of_ros>-joint-state-publisher-gui
 *  For command line input    
 
 ```
-ros2 launch simulation_rviz mario_rviz.launch    
+ros2 launch simulation_rviz rviz.launch.py  
 ```
 * To give input angles from command line
 ```

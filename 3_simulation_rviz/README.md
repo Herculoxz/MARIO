@@ -18,7 +18,7 @@ source install/setup.bash
 
 *  Run the launch file
 ```
-  ros2 launch simulation_rviz display.launch 
+  ros2 launch simulation_rviz display.launch.py 
 ```
 
 
@@ -45,7 +45,7 @@ ros2 launch simulation_rviz mario_rviz.launch
 ```
 * To give input angles from command line
 ```
-ros2 run simulation_rviz scripts/rviz.py
+ros2 run simulation_rviz rviz.py
 ```
 
 *you can use your this command to view the topics actively published . This will show if the values are published to the toppic we want to.
